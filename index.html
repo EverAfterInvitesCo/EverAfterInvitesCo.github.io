@@ -425,11 +425,34 @@
     font-size:0.78rem;
   }
 
-  .fade-in{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease), transform .7s var(--ease);}
-  .fade-in.visible{opacity:1;transform:translateY(0);}
+  .fade-in{opacity:0;transform:translateY(24px);filter:blur(10px);transition:opacity .7s var(--ease), transform .7s var(--ease), filter .7s var(--ease);}
+  .fade-in.visible{opacity:1;transform:translateY(0);filter:blur(0);}
+
+  /* staggered reveal within grouped rows */
+  .process-grid .process-step:nth-child(1){transition-delay:0s;}
+  .process-grid .process-step:nth-child(2){transition-delay:.12s;}
+  .process-grid .process-step:nth-child(3){transition-delay:.24s;}
+  .template-grid .t-card:nth-child(1){transition-delay:0s;}
+  .template-grid .t-card:nth-child(2){transition-delay:.12s;}
+  .template-grid .t-card:nth-child(3){transition-delay:.24s;}
+  .price-grid .price-card:nth-child(1){transition-delay:0s;}
+  .price-grid .price-card:nth-child(2){transition-delay:.14s;}
+  .faq-list .faq-item:nth-child(1){transition-delay:0s;}
+  .faq-list .faq-item:nth-child(2){transition-delay:.06s;}
+  .faq-list .faq-item:nth-child(3){transition-delay:.12s;}
+  .faq-list .faq-item:nth-child(4){transition-delay:.18s;}
+  .faq-list .faq-item:nth-child(5){transition-delay:.24s;}
+  .faq-list .faq-item:nth-child(6){transition-delay:.3s;}
+  .faq-list .faq-item:nth-child(7){transition-delay:.36s;}
+  .hero-frame-strip .mini-invite:nth-child(1){transition-delay:0s;}
+  .hero-frame-strip .mini-invite:nth-child(2){transition-delay:.12s;}
+  .hero-frame-strip .mini-invite:nth-child(3){transition-delay:.24s;}
+  .footer-grid > div:nth-child(1){transition-delay:0s;}
+  .footer-grid > div:nth-child(2){transition-delay:.1s;}
+  .footer-grid > div:nth-child(3){transition-delay:.2s;}
 
   @media(prefers-reduced-motion: reduce){
-    .fade-in{transition:none;opacity:1;transform:none;}
+    .fade-in{transition:none;opacity:1;transform:none;filter:none;}
     html{scroll-behavior:auto;}
   }
 </style>
@@ -481,15 +504,15 @@
     </div>
 
     <div class="hero-frame-strip">
-      <div class="mini-invite"><div class="names">M &amp; Y</div><div class="rule"></div><div class="date en-only">12 · 09 · 26</div><div class="date ar-only">12 . 9 . 26</div></div>
-      <div class="mini-invite"><div class="names">A &amp; K</div><div class="rule"></div><div class="date en-only">05 · 11 · 26</div><div class="date ar-only">5 . 11 . 26</div></div>
-      <div class="mini-invite"><div class="names">S &amp; O</div><div class="rule"></div><div class="date en-only">21 · 02 · 27</div><div class="date ar-only">21 . 2 . 27</div></div>
+      <div class="mini-invite fade-in"><div class="names">M &amp; Y</div><div class="rule"></div><div class="date en-only">12 · 09 · 26</div><div class="date ar-only">12 . 9 . 26</div></div>
+      <div class="mini-invite fade-in"><div class="names">A &amp; K</div><div class="rule"></div><div class="date en-only">05 · 11 · 26</div><div class="date ar-only">5 . 11 . 26</div></div>
+      <div class="mini-invite fade-in"><div class="names">S &amp; O</div><div class="rule"></div><div class="date en-only">21 · 02 · 27</div><div class="date ar-only">21 . 2 . 27</div></div>
     </div>
   </div>
 </section>
 
 <!-- ================= PROCESS ================= -->
-<section class="process" id="process">
+<section class="process fade-in" id="process">
   <div class="wrap">
     <div class="section-head fade-in">
       <span class="eyebrow en-only">How It Works</span>
@@ -525,7 +548,7 @@
 </section>
 
 <!-- ================= TEMPLATES ================= -->
-<section class="templates" id="templates">
+<section class="templates fade-in" id="templates">
   <div class="wrap">
     <div class="section-head fade-in">
       <span class="eyebrow en-only">Featured Design</span>
@@ -571,7 +594,7 @@
 </section>
 
 <!-- ================= PRICING ================= -->
-<section class="pricing" id="pricing">
+<section class="pricing fade-in" id="pricing">
   <div class="wrap">
     <div class="section-head fade-in">
       <span class="eyebrow en-only">Pricing</span>
@@ -644,7 +667,7 @@
 </section>
 
 <!-- ================= FAQ ================= -->
-<section class="faq" id="faq">
+<section class="faq fade-in" id="faq">
   <div class="wrap">
     <div class="section-head fade-in">
       <span class="eyebrow en-only">Questions</span>
@@ -722,7 +745,7 @@
 </section>
 
 <!-- ================= CLOSING CTA ================= -->
-<section class="closing">
+<section class="closing fade-in">
   <div class="wrap">
     <div class="seal"><span>E&amp;A</span></div>
     <h2><span class="en-only">Let Us Craft Yours</span><span class="ar-only">خلينا نصمملكم دعوتكم</span></h2>
@@ -739,7 +762,7 @@
 <footer>
   <div class="wrap">
     <div class="footer-grid">
-      <div>
+      <div class="fade-in">
         <div class="footer-brand">
           <img src="logo.png" alt="EverAfterInvites">
           <span>EverAfterInvites</span>
@@ -747,7 +770,7 @@
         <p class="tag en-only">Clean, modern digital wedding invitations, crafted around your story.</p>
         <p class="tag ar-only">دعوات جواز ديچيتال نضيفة وعصرية، مصممة عشان تحكي قصتكم.</p>
       </div>
-      <div>
+      <div class="fade-in">
         <h4 class="en-only">Navigation</h4><h4 class="ar-only">روابط</h4>
         <ul>
           <li><a href="#templates"><span class="en-only">Designs</span><span class="ar-only">التصاميم</span></a></li>
@@ -755,7 +778,7 @@
           <li><a href="#faq"><span class="en-only">FAQ</span><span class="ar-only">أسئلة</span></a></li>
         </ul>
       </div>
-      <div>
+      <div class="fade-in">
         <h4 class="en-only">Contact</h4><h4 class="ar-only">تواصل معنا</h4>
         <ul>
           <li><a href="https://ig.me/m/_everafterinvites_" target="_blank" rel="noopener"><span class="en-only">Instagram DM</span><span class="ar-only">راسلينا على انستجرام</span></a></li>
@@ -796,11 +819,12 @@
     });
   });
 
-  // Scroll reveal
+  // Scroll reveal (plays once per element, then stops observing it)
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if(entry.isIntersecting){
         entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
       }
     });
   }, {threshold:0.15});
