@@ -267,6 +267,14 @@
   .t-preview .rule{width:34px;height:1px;background:currentColor;opacity:0.5;}
   .t-preview .tnames{font-family:'Playfair Display',serif;font-size:1.6rem;}
   .t-preview .tdate{font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;opacity:0.7;}
+  .t-preview.has-link{cursor:pointer;}
+  .t-preview.has-link .live-hint{
+    position:absolute;bottom:10px;left:0;right:0;text-align:center;
+    font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;opacity:0;
+    transition:opacity .3s var(--ease);
+  }
+  body.rtl .t-preview.has-link .live-hint{font-size:0.72rem;letter-spacing:0.02em;}
+  .t-preview.has-link:hover .live-hint{opacity:0.85;}
   .t-card.theme-a .t-preview{background:var(--maroon-950);color:var(--cream-50);}
   .t-card.theme-b .t-preview{background:var(--cream-200);color:var(--maroon-950);}
   .t-card.theme-c .t-preview{background:#EDE7DC;color:var(--ink-900);}
@@ -278,8 +286,17 @@
   body.rtl .t-body .t-name{font-family:'Markazi Text',serif;font-size:1.25rem;}
   .t-body .t-tag{font-size:0.82rem;color:var(--ink-700);line-height:1.5;flex:1;}
   body.rtl .t-body .t-tag{font-size:0.92rem;}
+  .t-actions{display:flex;gap:8px;margin-top:auto;}
+  .t-view{
+    flex:1;display:flex;align-items:center;justify-content:center;gap:6px;
+    padding:10px 12px;border-radius:100px;background:var(--maroon-800);color:var(--cream-50);
+    font-size:0.78rem;font-weight:600;transition:all .25s var(--ease);
+  }
+  body.rtl .t-view{font-size:0.86rem;}
+  .t-view:hover{background:var(--maroon-950);}
+  .t-view svg{width:13px;height:13px;}
   .t-dm{
-    margin-top:auto;display:flex;align-items:center;justify-content:center;gap:8px;
+    flex:1;display:flex;align-items:center;justify-content:center;gap:8px;
     padding:10px 14px;border-radius:100px;border:1px solid var(--maroon-800);
     color:var(--maroon-800);font-size:0.78rem;font-weight:600;
     transition:all .25s var(--ease);
@@ -507,15 +524,21 @@
     <div class="template-grid">
 
       <div class="t-card theme-a fade-in">
-        <div class="t-preview"><div class="tnames">Ivory</div><div class="rule"></div><div class="tdate en-only">Minimal Serif</div><div class="tdate ar-only">خط نضيف</div></div>
+        <a href="https://everafterinvitesco.github.io/castlewedding/" target="_blank" rel="noopener" class="t-preview has-link" style="text-decoration:none;color:inherit;"><div class="tnames">Castle Wedding</div><div class="rule"></div><div class="tdate en-only">Storybook Romance</div><div class="tdate ar-only">حكاية روميو وجولييت</div><span class="live-hint en-only">View Live Example</span><span class="live-hint ar-only">شوفي مثال حي</span></a>
         <div class="t-body">
-          <div class="t-name">Ivory</div>
-          <div class="t-tag en-only">Deep tones, high-contrast type, understated elegance.</div>
-          <div class="t-tag ar-only">ألوان غامقة، خطوط واضحة، وشكل راقي وبسيط.</div>
-          <a class="t-dm" href="https://ig.me/m/_everafterinvites_" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-            <span class="en-only">DM to Order</span><span class="ar-only">اطلبيه دلوقتي</span>
-          </a>
+          <div class="t-name">Castle Wedding</div>
+          <div class="t-tag en-only">A romantic, storybook-inspired design — as seen in Farah &amp; Omar's real invitation.</div>
+          <div class="t-tag ar-only">تصميم روميو وحكايات خيالية — من دعوة حقيقية لفرح وعمر.</div>
+          <div class="t-actions">
+            <a class="t-view" href="https://everafterinvitesco.github.io/castlewedding/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span class="en-only">View Template</span><span class="ar-only">شوفي التصميم</span>
+            </a>
+            <a class="t-dm" href="https://ig.me/m/_everafterinvites_" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+              <span class="en-only">DM to Order</span><span class="ar-only">اطلبيه دلوقتي</span>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -584,23 +607,6 @@
         </div>
       </div>
 
-      <!-- Castle Wedding Template Card -->
-      <div class="t-card theme-a fade-in">
-        <div class="t-preview">
-          <div class="tnames">Castle</div>
-          <div class="rule"></div>
-          <div class="tdate en-only">Modern Elegance</div>
-        </div>
-        <div class="t-body">
-          <div class="t-name">Castle Wedding</div>
-          <div class="t-tag en-only">A classic, elegant design perfect for grand celebrations.</div>
-          <a class="t-dm" href="https://everafterinvitesco.github.io/castlewedding/" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-            <span class="en-only">View Demo</span>
-          </a>
-        </div>
-      </div>
-
     </div>
 
     <div class="templates-more fade-in">
@@ -612,4 +618,243 @@
 </section>
 
 <!-- ================= PRICING ================= -->
-<!-- (Remainder of your file remains unchanged) -->
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div class="section-head fade-in">
+      <span class="eyebrow en-only">Pricing</span>
+      <span class="eyebrow ar-only">الأسعار</span>
+      <h2><span class="en-only">Simple, Honest Pricing</span><span class="ar-only">سعر واضح وبسيط</span></h2>
+      <p class="en-only">One straightforward package, with a few extras if you want to make it even more yours.</p>
+      <p class="ar-only">باقة واحدة واضحة، ومعاها إضافات لو حابة تخصصي دعوتك أكتر.</p>
+    </div>
+
+    <div class="price-grid">
+
+      <div class="price-card featured fade-in">
+        <span class="badge en-only">Limited-Time Offer</span>
+        <span class="badge ar-only">عرض لفترة محدودة</span>
+        <h3><span class="en-only">Template Collection</span><span class="ar-only">باقة التصاميم</span></h3>
+        <p class="plan-note en-only">Our most popular option — pick, personalize, and send.</p>
+        <p class="plan-note ar-only">الباقة الأكتر طلبًا — اختاري، خصصي، وابعتي.</p>
+
+        <div class="price-row">
+          <span class="price-now">750 <span class="en-only" style="font-size:1rem;">EGP</span><span class="ar-only" style="font-size:1.1rem;">جنيه</span></span>
+          <span class="price-was">950 <span class="en-only">EGP</span><span class="ar-only">جنيه</span></span>
+        </div>
+        <div class="price-save en-only">Save 200 EGP for a limited time</div>
+        <div class="price-save ar-only">وفري 200 جنيه لفترة محدودة</div>
+
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span class="en-only">Choose any template from the collection</span><span class="ar-only">اختاري أي تصميم من الكولكشن</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span class="en-only">Your names, colors &amp; details applied</span><span class="ar-only">أسمائكم وألوانكم وتفاصيلكم في التصميم</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span class="en-only">Background music of your choice</span><span class="ar-only">موسيقى خلفية من اختياركم</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span class="en-only">Add or remove sections (Countdown, Location, Gallery)</span><span class="ar-only">إضافة أو حذف أقسام (العداد، الموقع، الصور)</span></li>
+        </ul>
+
+        <div class="addons">
+          <span class="addons-label en-only">Optional Extras</span>
+          <span class="addons-label ar-only">إضافات اختيارية</span>
+          <div class="addons-row"><span class="en-only">Bilingual Site (EN &amp; Egyptian Arabic)</span><span class="ar-only">نسخة عربي وانجليزي</span><span>+150 <span class="en-only">EGP</span><span class="ar-only">جنيه</span></span></div>
+          <div class="addons-row"><span class="en-only">Digital RSVP &amp; Guest List</span><span class="ar-only">تأكيد حضور الضيوف</span><span>+150 <span class="en-only">EGP</span><span class="ar-only">جنيه</span></span></div>
+          <div class="addons-row"><span class="en-only">Custom Link Preview Photo</span><span class="ar-only">صورة مخصصة للينك</span><span>+100 <span class="en-only">EGP</span><span class="ar-only">جنيه</span></span></div>
+        </div>
+
+        <a href="https://ig.me/m/_everafterinvites_" target="_blank" rel="noopener" class="btn" style="background:var(--gold-500);color:var(--maroon-950);">
+          <span class="en-only">Order on Instagram</span><span class="ar-only">اطلبي على انستجرام</span>
+        </a>
+      </div>
+
+      <div class="price-card fade-in">
+        <h3><span class="en-only">Fully Custom</span><span class="ar-only">تصميم خاص</span></h3>
+        <p class="plan-note en-only">A one-of-a-kind design, built around your story from scratch.</p>
+        <p class="plan-note ar-only">تصميم خاص بيكم بالكامل، من الصفر.</p>
+
+        <div class="price-row">
+          <span class="price-now" style="font-size:1.6rem;"><span class="en-only">Tailored Cost</span><span class="ar-only">سعر حسب التفاصيل</span></span>
+        </div>
+        <div class="price-save" style="color:var(--ink-700);opacity:0.75;"><span class="en-only">🔒 Depends on the details</span><span class="ar-only">🔒 السعر بيختلف حسب طلبكم</span></div>
+
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span class="en-only">100% custom design, built from scratch</span><span class="ar-only">تصميم 100% من الصفر</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span class="en-only">Any sections tailored exactly to your needs</span><span class="ar-only">أقسام مخصصة بالكامل لطلبكم</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span class="en-only">We bring any idea or concept to life</span><span class="ar-only">أي فكرة أو كونسيبت بنحولها لحقيقة</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span class="en-only">Unlimited revisions until it's exactly right</span><span class="ar-only">تعديلات غير محدودة لغاية ما تحسي إنها هي</span></li>
+        </ul>
+
+        <a href="https://ig.me/m/_everafterinvites_" target="_blank" rel="noopener" class="btn btn-ghost">
+          <span class="en-only">Ask on Instagram</span><span class="ar-only">اسأليني على انستجرام</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="section-head fade-in">
+      <span class="eyebrow en-only">Questions</span>
+      <span class="eyebrow ar-only">أسئلة</span>
+      <h2><span class="en-only">Frequently Asked Questions</span><span class="ar-only">أسئلة بتتكرر كتير</span></h2>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="faq-item fade-in">
+        <button class="faq-q">
+          <span class="en-only">What happens after I message you?</span><span class="ar-only">هيحصل إيه بعد ما أراسلكم؟</span>
+          <span class="plus"></span>
+        </button>
+        <div class="faq-a"><p class="en-only">Once you DM us your chosen template and details, we'll ask for your names, date, colors, and any photos. Our team then builds your personalized invitation for your review.</p>
+        <p class="ar-only">بعد ما تختاري التصميم وتراسلينا، هنطلب منك الأسماء والتاريخ والألوان وأي صور. وبعدين هنجهز الدعوة عشان تراجعيها.</p></div>
+      </div>
+
+      <div class="faq-item fade-in">
+        <button class="faq-q">
+          <span class="en-only">Can I include my own photos?</span><span class="ar-only">ممكن أضيف صوري الخاصة؟</span>
+          <span class="plus"></span>
+        </button>
+        <div class="faq-a"><p class="en-only">Yes! Every template allows you to add your own photos and gallery into the design.</p>
+        <p class="ar-only">طبعًا! كل التصاميم بتسمحلك تضيفي صورك وجاليري خاص بيكم.</p></div>
+      </div>
+
+      <div class="faq-item fade-in">
+        <button class="faq-q">
+          <span class="en-only">Can details be changed later?</span><span class="ar-only">ممكن أعدل التفاصيل بعدين؟</span>
+          <span class="plus"></span>
+        </button>
+        <div class="faq-a"><p class="en-only">We offer a limited round of revisions on the Template Collection, and unlimited revisions on the Fully Custom plan, so dates, locations, or wording can be updated if needed.</p>
+        <p class="ar-only">في باقة التصاميم بيكون فيه عدد محدود من التعديلات، وفي التصميم الخاص التعديلات مفتوحة، عشان تقدري تغيري التاريخ أو المكان أو أي كلام لو احتاج الأمر.</p></div>
+      </div>
+
+      <div class="faq-item fade-in">
+        <button class="faq-q">
+          <span class="en-only">How long does it take?</span><span class="ar-only">هتستغرق قد إيه؟</span>
+          <span class="plus"></span>
+        </button>
+        <div class="faq-a"><p class="en-only">Template Collection designs usually take 2-4 business days after we receive your details. Fully Custom designs take 3-7 days depending on complexity.</p>
+        <p class="ar-only">باقة التصاميم بتاخد من 2 لـ 4 أيام عمل بعد استلام تفاصيلك، والتصميم الخاص بياخد من 3 لـ 7 أيام حسب التعقيد.</p></div>
+      </div>
+
+      <div class="faq-item fade-in">
+        <button class="faq-q">
+          <span class="en-only">Do I get to review it before it's final?</span><span class="ar-only">هشوفها قبل ما تخلص؟</span>
+          <span class="plus"></span>
+        </button>
+        <div class="faq-a"><p class="en-only">Absolutely. We'll share a live preview link so you can check the design and text, and we'll refine it until it feels right.</p>
+        <p class="ar-only">بالتأكيد. هنبعتلك لينك معاينة عشان تشوفي التصميم والكلام، وهنعدل لحد ما يعجبك.</p></div>
+      </div>
+
+      <div class="faq-item fade-in">
+        <button class="faq-q">
+          <span class="en-only">How many guests can view the invitation?</span><span class="ar-only">فيه حد أقصى لعدد الضيوف؟</span>
+          <span class="plus"></span>
+        </button>
+        <div class="faq-a"><p class="en-only">No limit at all. You get one unique link and can share it with as many guests as you like.</p>
+        <p class="ar-only">مفيش حد أقصى خالص. بتاخدي لينك واحد وتقدري تبعتيه لأي عدد ضيوف حابة.</p></div>
+      </div>
+
+      <div class="faq-item fade-in">
+        <button class="faq-q">
+          <span class="en-only">How long does the link stay active?</span><span class="ar-only">اللينك يفضل شغال قد إيه؟</span>
+          <span class="plus"></span>
+        </button>
+        <div class="faq-a"><p class="en-only">Your invitation link stays active forever, as a lasting digital memory of your day.</p>
+        <p class="ar-only">لينك الدعوة بيفضل شغال للأبد كذكرى ديچيتال دايمة ليومكم.</p></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CLOSING CTA ================= -->
+<section class="closing">
+  <div class="wrap">
+    <div class="seal"><span>E&amp;A</span></div>
+    <h2><span class="en-only">Let Us Craft Yours</span><span class="ar-only">خلينا نصمملكم دعوتكم</span></h2>
+    <p class="en-only">Every great story deserves a beautiful beginning. Message us on Instagram to get started.</p>
+    <p class="ar-only">كل قصة حلوة تستحق بداية تليق بيها. راسلينا على انستجرام ونبدأ سوا.</p>
+    <a href="https://ig.me/m/_everafterinvites_" target="_blank" rel="noopener" class="btn" style="background:var(--gold-500);color:var(--maroon-950);">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+      <span class="en-only">DM Us on Instagram</span><span class="ar-only">راسلينا على انستجرام</span>
+    </a>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="logo.png" alt="EverAfterInvites">
+          <span>EverAfterInvites</span>
+        </div>
+        <p class="tag en-only">Clean, modern digital wedding invitations, crafted around your story.</p>
+        <p class="tag ar-only">دعوات جواز ديچيتال نضيفة وعصرية، مصممة عشان تحكي قصتكم.</p>
+      </div>
+      <div>
+        <h4 class="en-only">Navigation</h4><h4 class="ar-only">روابط</h4>
+        <ul>
+          <li><a href="#templates"><span class="en-only">Designs</span><span class="ar-only">التصاميم</span></a></li>
+          <li><a href="#pricing"><span class="en-only">Pricing</span><span class="ar-only">الأسعار</span></a></li>
+          <li><a href="#faq"><span class="en-only">FAQ</span><span class="ar-only">أسئلة</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="en-only">Contact</h4><h4 class="ar-only">تواصل معنا</h4>
+        <ul>
+          <li><a href="https://ig.me/m/_everafterinvites_" target="_blank" rel="noopener"><span class="en-only">Instagram DM</span><span class="ar-only">راسلينا على انستجرام</span></a></li>
+          <li><a href="https://www.instagram.com/_everafterinvites_/" target="_blank" rel="noopener">@_everafterinvites_</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 EverAfterInvites. <span class="en-only">All rights reserved.</span><span class="ar-only">كل الحقوق محفوظة.</span></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Language toggle
+  const langToggle = document.getElementById('langToggle');
+  langToggle.addEventListener('click', () => {
+    const isRtl = document.body.classList.toggle('rtl');
+    document.documentElement.setAttribute('lang', isRtl ? 'ar' : 'en');
+    document.documentElement.setAttribute('dir', isRtl ? 'rtl' : 'ltr');
+    langToggle.textContent = isRtl ? 'EN / AR' : 'EN / AR';
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    q.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(other => {
+        if(other !== item){
+          other.classList.remove('open');
+          other.querySelector('.faq-a').style.maxHeight = null;
+        }
+      });
+      item.classList.toggle('open', !isOpen);
+      a.style.maxHeight = !isOpen ? a.scrollHeight + 'px' : null;
+    });
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {threshold:0.15});
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Mobile nav fallback: smooth scroll already handled via CSS scroll-behavior
+</script>
+
+</body>
+</html>
