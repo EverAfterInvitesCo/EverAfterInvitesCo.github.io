@@ -250,6 +250,7 @@
   /* ---------- TEMPLATES ---------- */
   .templates{padding:110px 0;background:var(--cream-100);}
   .template-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+  .template-grid:has(.t-card:only-child){grid-template-columns:1fr;justify-content:center;max-width:380px;margin:0 auto;}
   @media(max-width:900px){.template-grid{grid-template-columns:repeat(2,1fr);}}
   @media(max-width:600px){.template-grid{grid-template-columns:1fr;}}
 
@@ -514,11 +515,11 @@
 <section class="templates" id="templates">
   <div class="wrap">
     <div class="section-head fade-in">
-      <span class="eyebrow en-only">The Collection</span>
-      <span class="eyebrow ar-only">التصاميم</span>
-      <h2><span class="en-only">Designed to Be Minimal</span><span class="ar-only">تصاميم نضيفة وبسيطة</span></h2>
-      <p class="en-only">No clutter, no clichés, no default florals — just clean lines, considered type, and space for your story to breathe.</p>
-      <p class="ar-only">مفيش زحمة ولا ورد جاهز ولا حاجة مكررة، بس خطوط نضيفة وتصميم مرتب يليق بقصتكم.</p>
+      <span class="eyebrow en-only">Featured Design</span>
+      <span class="eyebrow ar-only">تصميم مميز</span>
+      <h2><span class="en-only">Castle Wedding</span><span class="ar-only">Castle Wedding</span></h2>
+      <p class="en-only">A romantic, storybook-inspired design — clean and minimal, with no clutter or clichés. Take a look at the live example below.</p>
+      <p class="ar-only">تصميم روميو وحكايات خيالية — نضيف وبسيط بدون زحمة أو حاجة مكررة. شوفي المثال الحي تحت.</p>
     </div>
 
     <div class="template-grid">
@@ -542,76 +543,12 @@
         </div>
       </div>
 
-      <div class="t-card theme-b fade-in">
-        <div class="t-preview"><div class="tnames">Linen</div><div class="rule"></div><div class="tdate en-only">Soft &amp; Airy</div><div class="tdate ar-only">هادي وخفيف</div></div>
-        <div class="t-body">
-          <div class="t-name">Linen</div>
-          <div class="t-tag en-only">Warm neutrals and generous white space for a relaxed feel.</div>
-          <div class="t-tag ar-only">ألوان دافية وفراغات مريحة للعين.</div>
-          <a class="t-dm" href="https://ig.me/m/_everafterinvites_" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-            <span class="en-only">DM to Order</span><span class="ar-only">اطلبيه دلوقتي</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="t-card theme-c fade-in">
-        <div class="t-preview"><div class="tnames">Parchment</div><div class="rule"></div><div class="tdate en-only">Editorial</div><div class="tdate ar-only">أسلوب مجلات</div></div>
-        <div class="t-body">
-          <div class="t-name">Parchment</div>
-          <div class="t-tag en-only">Newsprint-inspired type with a quiet, timeless mood.</div>
-          <div class="t-tag ar-only">شكل مستوحى من الجرايد بروح كلاسيك هادية.</div>
-          <a class="t-dm" href="https://ig.me/m/_everafterinvites_" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-            <span class="en-only">DM to Order</span><span class="ar-only">اطلبيه دلوقتي</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="t-card theme-d fade-in">
-        <div class="t-preview"><div class="tnames">Noir</div><div class="rule"></div><div class="tdate en-only">Bold &amp; Dark</div><div class="tdate ar-only">جامد وغامق</div></div>
-        <div class="t-body">
-          <div class="t-name">Noir</div>
-          <div class="t-tag en-only">Near-black backdrop with gold type for a dramatic entrance.</div>
-          <div class="t-tag ar-only">خلفية غامقة وخط دهبي لدخلة قوية.</div>
-          <a class="t-dm" href="https://ig.me/m/_everafterinvites_" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-            <span class="en-only">DM to Order</span><span class="ar-only">اطلبيه دلوقتي</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="t-card theme-e fade-in">
-        <div class="t-preview"><div class="tnames">Terra</div><div class="rule"></div><div class="tdate en-only">Warm Wine</div><div class="tdate ar-only">لون خمري دافي</div></div>
-        <div class="t-body">
-          <div class="t-name">Terra</div>
-          <div class="t-tag en-only">Rich wine tones that echo the EverAfterInvites palette.</div>
-          <div class="t-tag ar-only">درجات خمري غنية بتشبه هوية إيفر آفتر.</div>
-          <a class="t-dm" href="https://ig.me/m/_everafterinvites_" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-            <span class="en-only">DM to Order</span><span class="ar-only">اطلبيه دلوقتي</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="t-card theme-f fade-in">
-        <div class="t-preview"><div class="tnames">Alabaster</div><div class="rule"></div><div class="tdate en-only">Bright &amp; Clean</div><div class="tdate ar-only">فاتح ونضيف</div></div>
-        <div class="t-body">
-          <div class="t-name">Alabaster</div>
-          <div class="t-tag en-only">Crisp whites and fine hairlines for a light, modern look.</div>
-          <div class="t-tag ar-only">أبيض صافي وخطوط رفيعة لشكل عصري خفيف.</div>
-          <a class="t-dm" href="https://ig.me/m/_everafterinvites_" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-            <span class="en-only">DM to Order</span><span class="ar-only">اطلبيه دلوقتي</span>
-          </a>
-        </div>
-      </div>
 
     </div>
 
     <div class="templates-more fade-in">
       <a href="https://ig.me/m/_everafterinvites_" target="_blank" rel="noopener" class="btn btn-ghost">
-        <span class="en-only">See the Full Collection on Instagram</span><span class="ar-only">شوفي كل التصاميم على انستجرام</span>
+        <span class="en-only">Ask About More Designs on Instagram</span><span class="ar-only">اسألينا عن تصاميم تانية على انستجرام</span>
       </a>
     </div>
   </div>
