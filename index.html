@@ -425,8 +425,18 @@
     font-size:0.78rem;
   }
 
-  .fade-in{opacity:0;transform:translateY(24px);filter:blur(10px);transition:opacity .7s var(--ease), transform .7s var(--ease), filter .7s var(--ease);}
-  .fade-in.visible{opacity:1;transform:translateY(0);filter:blur(0);}
+  /* ---------- ANIMATION UPDATED FOR ONCE-ONLY REVEAL ---------- */
+  .fade-in{
+    opacity:0;
+    transform:translateY(24px);
+    filter:blur(10px);
+    transition:opacity .7s var(--ease), transform .7s var(--ease), filter .7s var(--ease);
+  }
+  .fade-in.visible{
+    opacity:1;
+    transform:translateY(0);
+    filter:blur(0);
+  }
 
   /* staggered reveal within grouped rows */
   .process-grid .process-step:nth-child(1){transition-delay:0s;}
@@ -604,7 +614,6 @@
         </div>
       </div>
 
-
     </div>
 
     <div class="templates-more fade-in">
@@ -640,47 +649,64 @@
           <span class="price-was">950 <span class="en-only">EGP</span><span class="ar-only">جنيه</span></span>
         </div>
         <div class="price-save en-only">Save 200 EGP for a limited time</div>
-        <div class="price-save ar-only">وفري 200 جنيه لفترة محدودة</div>
+        <div class="price-save ar-only">وفرى 200 جنيه لفترة محدودة</div>
 
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span class="en-only">Choose any template from the collection</span><span class="ar-only">اختاري أي تصميم من الكولكشن</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span class="en-only">Your names, colors &amp; details applied</span><span class="ar-only">أسمائكم وألوانكم وتفاصيلكم في التصميم</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span class="en-only">Background music of your choice</span><span class="ar-only">موسيقى خلفية من اختياركم</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span class="en-only">Add or remove sections (Countdown, Location, Gallery)</span><span class="ar-only">إضافة أو حذف أقسام (العداد، الموقع، الصور)</span></li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="en-only">Fully personalized digital invitation web page</span>
+            <span class="ar-only">صفحة دعوة ديچيتال مخصصة بالكامل ليكم</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="en-only">Custom names, date, venue details &amp; story</span>
+            <span class="ar-only">أسمائكم، التاريخ، تفاصيل المكان وقصتكم</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="en-only">Interactive elements (Countdown, music, etc.)</span>
+            <span class="ar-only">عناصر تفاعلية (عد تنازلى، موسيقى، وغيرها)</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="en-only">Ready-to-share link for unlimited guests</span>
+            <span class="ar-only">لينك جاهز للمشاركة لعدد غير محدود من الضيوف</span>
+          </li>
         </ul>
 
-        <div class="addons">
-          <span class="addons-label en-only">Optional Extras</span>
-          <span class="addons-label ar-only">إضافات اختيارية</span>
-          <div class="addons-row"><span class="en-only">Bilingual Site (EN &amp; Egyptian Arabic)</span><span class="ar-only">نسخة عربي وانجليزي</span><span>+150 <span class="en-only">EGP</span><span class="ar-only">جنيه</span></span></div>
-          <div class="addons-row"><span class="en-only">Digital RSVP &amp; Guest List</span><span class="ar-only">تأكيد حضور الضيوف</span><span>+150 <span class="en-only">EGP</span><span class="ar-only">جنيه</span></span></div>
-          <div class="addons-row"><span class="en-only">Custom Link Preview Photo</span><span class="ar-only">صورة مخصصة للينك</span><span>+100 <span class="en-only">EGP</span><span class="ar-only">جنيه</span></span></div>
-        </div>
-
-        <a href="https://ig.me/m/_everafterinvites_" target="_blank" rel="noopener" class="btn" style="background:var(--gold-500);color:var(--maroon-950);">
-          <span class="en-only">Order on Instagram</span><span class="ar-only">اطلبي على انستجرام</span>
+        <a href="https://ig.me/m/_everafterinvites_" target="_blank" rel="noopener" class="btn btn-cream">
+          <span class="en-only">Order This Template</span><span class="ar-only">احجزي التصميم ده</span>
         </a>
       </div>
 
       <div class="price-card fade-in">
-        <h3><span class="en-only">Fully Custom</span><span class="ar-only">تصميم خاص</span></h3>
-        <p class="plan-note en-only">A one-of-a-kind design, built around your story from scratch.</p>
-        <p class="plan-note ar-only">تصميم خاص بيكم بالكامل، من الصفر.</p>
+        <h3><span class="en-only">Custom Add-ons</span><span class="ar-only">إضافات مخصصة</span></h3>
+        <p class="plan-note en-only">Enhance your invitation with custom features.</p>
+        <p class="plan-note ar-only">ضيفى لمسات مميزة لدعوتك.</p>
 
-        <div class="price-row">
-          <span class="price-now" style="font-size:1.6rem;"><span class="en-only">Tailored Cost</span><span class="ar-only">سعر حسب التفاصيل</span></span>
+        <div class="addons" style="border-top:none;padding-top:0;">
+          <span class="addons-label en-only">Optional Extras</span>
+          <span class="addons-label ar-only">إضافات اختيارية</span>
+          <div class="addons-row">
+            <span class="en-only">RSVP Guest Form Collection</span><span class="ar-only">نموذج لتأكيد الحضور (RSVP)</span>
+            <span>+250 EGP</span>
+          </div>
+          <div class="addons-row">
+            <span class="en-only">Custom Background Music Track</span><span class="ar-only">موسيقى خلفية مخصصة</span>
+            <span>+150 EGP</span>
+          </div>
+          <div class="addons-row">
+            <span class="en-only">Interactive Photo Gallery Section</span><span class="ar-only">جاليرى صور تفاعلى</span>
+            <span>+200 EGP</span>
+          </div>
+          <div class="addons-row">
+            <span class="en-only">Custom Domain Name (e.g. .com)</span><span class="ar-only">دومين خاص باسمكم (.com)</span>
+            <span>+400 EGP</span>
+          </div>
         </div>
-        <div class="price-save" style="color:var(--ink-700);opacity:0.75;"><span class="en-only">🔒 Depends on the details</span><span class="ar-only">🔒 السعر بيختلف حسب طلبكم</span></div>
 
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span class="en-only">100% custom design, built from scratch</span><span class="ar-only">تصميم 100% من الصفر</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span class="en-only">Any sections tailored exactly to your needs</span><span class="ar-only">أقسام مخصصة بالكامل لطلبكم</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span class="en-only">We bring any idea or concept to life</span><span class="ar-only">أي فكرة أو كونسيبت بنحولها لحقيقة</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span class="en-only">Unlimited revisions until it's exactly right</span><span class="ar-only">تعديلات غير محدودة لغاية ما تحسي إنها هي</span></li>
-        </ul>
-
-        <a href="https://ig.me/m/_everafterinvites_" target="_blank" rel="noopener" class="btn btn-ghost">
-          <span class="en-only">Ask on Instagram</span><span class="ar-only">اسأليني على انستجرام</span>
+        <a href="https://ig.me/m/_everafterinvites_" target="_blank" rel="noopener" class="btn btn-primary">
+          <span class="en-only">Ask About Custom Add-ons</span><span class="ar-only">اسألينا عن الإضافات</span>
         </a>
       </div>
 
@@ -692,74 +718,61 @@
 <section class="faq fade-in" id="faq">
   <div class="wrap">
     <div class="section-head fade-in">
-      <span class="eyebrow en-only">Questions</span>
-      <span class="eyebrow ar-only">أسئلة</span>
-      <h2><span class="en-only">Frequently Asked Questions</span><span class="ar-only">أسئلة بتتكرر كتير</span></h2>
+      <span class="eyebrow en-only">Questions &amp; Answers</span>
+      <span class="eyebrow ar-only">الأسئلة الشائعة</span>
+      <h2><span class="en-only">Everything You Need to Know</span><span class="ar-only">كل اللي محتاجة تعرفيه</span></h2>
+      <p class="en-only">Got questions about how it works? We've got answers.</p>
+      <p class="ar-only">عندك استفسارات عن الطريقة؟ جمعنالك كل الإجابات هنا.</p>
     </div>
 
     <div class="faq-list">
 
       <div class="faq-item fade-in">
         <button class="faq-q">
-          <span class="en-only">What happens after I message you?</span><span class="ar-only">هيحصل إيه بعد ما أراسلكم؟</span>
-          <span class="plus"></span>
+          <span class="en-only">How do my guests view the invitation?</span>
+          <span class="ar-only">الضيوف هيشوفوا الدعوة إزاي؟</span>
+          <div class="plus"></div>
         </button>
-        <div class="faq-a"><p class="en-only">Once you DM us your chosen template and details, we'll ask for your names, date, colors, and any photos. Our team then builds your personalized invitation for your review.</p>
-        <p class="ar-only">بعد ما تختاري التصميم وتراسلينا، هنطلب منك الأسماء والتاريخ والألوان وأي صور. وبعدين هنجهز الدعوة عشان تراجعيها.</p></div>
+        <div class="faq-a">
+          <p class="en-only">Your guests simply tap the web link you send them via WhatsApp, Instagram, or text. It opens instantly in any smartphone browser with zero apps required.</p>
+          <p class="ar-only">الضيوف هيدوسوا على اللينك اللي هتبعتيه لهم واتساب أو انستجرام أو رسالة. بتفتح فوراً على أي موبايل من غير ما يحتاجوا يحملوا أي تطبيق.</p>
+        </div>
       </div>
 
       <div class="faq-item fade-in">
         <button class="faq-q">
-          <span class="en-only">Can I include my own photos?</span><span class="ar-only">ممكن أضيف صوري الخاصة؟</span>
-          <span class="plus"></span>
+          <span class="en-only">How long does it take to get my invitation?</span>
+          <span class="ar-only">الدعوة بتاخد وقت قد إبيه على ما تخلص؟</span>
+          <div class="plus"></div>
         </button>
-        <div class="faq-a"><p class="en-only">Yes! Every template allows you to add your own photos and gallery into the design.</p>
-        <p class="ar-only">طبعًا! كل التصاميم بتسمحلك تضيفي صورك وجاليري خاص بيكم.</p></div>
+        <div class="faq-a">
+          <p class="en-only">Once you send us your details and choose your template, your custom invitation link is usually ready within 24 to 48 hours.</p>
+          <p class="ar-only">بمجرد ما تبعتيلنا التفاصيل وتختاري التصميم، اللينك المخصص بتاعك بيكون جاهز غالباً خلال 24 لـ 48 ساعة.</p>
+        </div>
       </div>
 
       <div class="faq-item fade-in">
         <button class="faq-q">
-          <span class="en-only">Can details be changed later?</span><span class="ar-only">ممكن أعدل التفاصيل بعدين؟</span>
-          <span class="plus"></span>
+          <span class="en-only">Can we include our own music or photos?</span>
+          <span class="ar-only">ينفع نضيف أغنيتنا المفضلة أو صورنا؟</span>
+          <div class="plus"></div>
         </button>
-        <div class="faq-a"><p class="en-only">We offer a limited round of revisions on the Template Collection, and unlimited revisions on the Fully Custom plan, so dates, locations, or wording can be updated if needed.</p>
-        <p class="ar-only">في باقة التصاميم بيكون فيه عدد محدود من التعديلات، وفي التصميم الخاص التعديلات مفتوحة، عشان تقدري تغيري التاريخ أو المكان أو أي كلام لو احتاج الأمر.</p></div>
+        <div class="faq-a">
+          <p class="en-only">Yes! Depending on your chosen template and options, we can embed your favorite song and include a photo section of you both.</p>
+          <p class="ar-only">أكيد! حسب التصميم والباقة، نقدر نضيف أغنيتكم المفضلة وقسم خاص بصوركم مع بعض.</p>
+        </div>
       </div>
 
       <div class="faq-item fade-in">
         <button class="faq-q">
-          <span class="en-only">How long does it take?</span><span class="ar-only">هتستغرق قد إيه؟</span>
-          <span class="plus"></span>
+          <span class="en-only">How do I order?</span>
+          <span class="ar-only">أقدر أطلب الدعوة إزاي؟</span>
+          <div class="plus"></div>
         </button>
-        <div class="faq-a"><p class="en-only">Template Collection designs usually take 2-4 business days after we receive your details. Fully Custom designs take 3-7 days depending on complexity.</p>
-        <p class="ar-only">باقة التصاميم بتاخد من 2 لـ 4 أيام عمل بعد استلام تفاصيلك، والتصميم الخاص بياخد من 3 لـ 7 أيام حسب التعقيد.</p></div>
-      </div>
-
-      <div class="faq-item fade-in">
-        <button class="faq-q">
-          <span class="en-only">Do I get to review it before it's final?</span><span class="ar-only">هشوفها قبل ما تخلص؟</span>
-          <span class="plus"></span>
-        </button>
-        <div class="faq-a"><p class="en-only">Absolutely. We'll share a live preview link so you can check the design and text, and we'll refine it until it feels right.</p>
-        <p class="ar-only">بالتأكيد. هنبعتلك لينك معاينة عشان تشوفي التصميم والكلام، وهنعدل لحد ما يعجبك.</p></div>
-      </div>
-
-      <div class="faq-item fade-in">
-        <button class="faq-q">
-          <span class="en-only">How many guests can view the invitation?</span><span class="ar-only">فيه حد أقصى لعدد الضيوف؟</span>
-          <span class="plus"></span>
-        </button>
-        <div class="faq-a"><p class="en-only">No limit at all. You get one unique link and can share it with as many guests as you like.</p>
-        <p class="ar-only">مفيش حد أقصى خالص. بتاخدي لينك واحد وتقدري تبعتيه لأي عدد ضيوف حابة.</p></div>
-      </div>
-
-      <div class="faq-item fade-in">
-        <button class="faq-q">
-          <span class="en-only">How long does the link stay active?</span><span class="ar-only">اللينك يفضل شغال قد إيه؟</span>
-          <span class="plus"></span>
-        </button>
-        <div class="faq-a"><p class="en-only">Your invitation link stays active forever, as a lasting digital memory of your day.</p>
-        <p class="ar-only">لينك الدعوة بيفضل شغال للأبد كذكرى ديچيتال دايمة ليومكم.</p></div>
+        <div class="faq-a">
+          <p class="en-only">Just click any "DM to Order" or message button on this page to open an Instagram chat with us. We'll take care of the rest!</p>
+          <p class="ar-only">بكل بساطة ادوسي على أي زرار "اطلبيه دلوقتي" أو زرار الرسائل في الصفحة عشان تفتحي معانا شات على انستجرام، واحنا هنتولى الباقي!</p>
+        </div>
       </div>
 
     </div>
@@ -770,12 +783,12 @@
 <section class="closing fade-in">
   <div class="wrap">
     <div class="seal"><span>E&amp;A</span></div>
-    <h2><span class="en-only">Let Us Craft Yours</span><span class="ar-only">خلينا نصمملكم دعوتكم</span></h2>
-    <p class="en-only">Every great story deserves a beautiful beginning. Message us on Instagram to get started.</p>
-    <p class="ar-only">كل قصة حلوة تستحق بداية تليق بيها. راسلينا على انستجرام ونبدأ سوا.</p>
-    <a href="https://ig.me/m/_everafterinvites_" target="_blank" rel="noopener" class="btn" style="background:var(--gold-500);color:var(--maroon-950);">
+    <h2><span class="en-only">Ready to Send Your Invitation?</span><span class="ar-only">جاهزة تبتدى دعوتك؟</span></h2>
+    <p class="en-only">Let's craft a digital experience that your guests will talk about long after the wedding day.</p>
+    <p class="ar-only">تعالوا نصمم تجربة ديچيتال ضيوفكم يفضلوا فاكرينها ويتكلموا عنها بعد الفرح بكتير.</p>
+    <a href="https://ig.me/m/_everafterinvites_" target="_blank" rel="noopener" class="btn btn-primary" style="background:var(--cream-550, #FBF7F1);color:var(--maroon-950);padding:14px 28px;">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-      <span class="en-only">DM Us on Instagram</span><span class="ar-only">راسلينا على انستجرام</span>
+      <span class="en-only">Chat With Us on Instagram</span><span class="ar-only">ابدأى الشات معانا على انستجرام</span>
     </a>
   </div>
 </section>
@@ -784,76 +797,94 @@
 <footer>
   <div class="wrap">
     <div class="footer-grid">
-      <div class="fade-in">
+      <div>
         <div class="footer-brand">
           <img src="logo.png" alt="EverAfterInvites">
           <span>EverAfterInvites</span>
         </div>
-        <p class="tag en-only">Clean, modern digital wedding invitations, crafted around your story.</p>
-        <p class="tag ar-only">دعوات جواز ديچيتال نضيفة وعصرية، مصممة عشان تحكي قصتكم.</p>
+        <p class="tag en-only">Modern digital wedding invitations designed for couples who want something truly personal.</p>
+        <p class="tag ar-only">دعوات جواز ديچيتال عصرية مصممة خصيصاً للعروسين اللي دوروا على حاجة مميزة.</p>
       </div>
-      <div class="fade-in">
-        <h4 class="en-only">Navigation</h4><h4 class="ar-only">روابط</h4>
+      <div>
+        <h4 class="en-only">Quick Links</h4>
+        <h4 class="ar-only">روابط سريعة</h4>
         <ul>
           <li><a href="#templates"><span class="en-only">Designs</span><span class="ar-only">التصاميم</span></a></li>
           <li><a href="#pricing"><span class="en-only">Pricing</span><span class="ar-only">الأسعار</span></a></li>
-          <li><a href="#faq"><span class="en-only">FAQ</span><span class="ar-only">أسئلة</span></a></li>
+          <li><a href="#process"><span class="en-only">Process</span><span class="ar-only">طريقة العمل</span></a></li>
+          <li><a href="#faq"><span class="en-only">FAQ</span><span class="ar-only">الأسئلة الشائعة</span></a></li>
         </ul>
       </div>
-      <div class="fade-in">
-        <h4 class="en-only">Contact</h4><h4 class="ar-only">تواصل معنا</h4>
+      <div>
+        <h4 class="en-only">Connect</h4>
+        <h4 class="ar-only">تواصل معانا</h4>
         <ul>
-          <li><a href="https://ig.me/m/_everafterinvites_" target="_blank" rel="noopener"><span class="en-only">Instagram DM</span><span class="ar-only">راسلينا على انستجرام</span></a></li>
-          <li><a href="https://www.instagram.com/_everafterinvites_/" target="_blank" rel="noopener">@_everafterinvites_</a></li>
+          <li><a href="https://ig.me/m/_everafterinvites_" target="_blank" rel="noopener"><span class="en-only">Instagram DM</span><span class="ar-only">انستجرام</span></a></li>
+          <li><a href="https://ig.me/m/_everafterinvites_" target="_blank" rel="noopener"><span class="en-only">Custom Orders</span><span class="ar-only">طلبات مخصصة</span></a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 EverAfterInvites. <span class="en-only">All rights reserved.</span><span class="ar-only">كل الحقوق محفوظة.</span></span>
+      <div>&copy; <span id="year"></span> EverAfterInvites. All rights reserved.</div>
+      <div>Crafted for modern celebrations</div>
     </div>
   </div>
 </footer>
 
 <script>
-  // Language toggle
+  // Language Toggle
   const langToggle = document.getElementById('langToggle');
+  const body = document.body;
+
   langToggle.addEventListener('click', () => {
-    const isRtl = document.body.classList.toggle('rtl');
-    document.documentElement.setAttribute('lang', isRtl ? 'ar' : 'en');
+    body.classList.toggle('rtl');
+    const isRtl = body.classList.contains('rtl');
     document.documentElement.setAttribute('dir', isRtl ? 'rtl' : 'ltr');
-    langToggle.textContent = isRtl ? 'EN / AR' : 'EN / AR';
+    document.documentElement.setAttribute('lang', isRtl ? 'ar' : 'en');
   });
 
-  // FAQ accordion
-  document.querySelectorAll('.faq-item').forEach(item => {
-    const q = item.querySelector('.faq-q');
-    const a = item.querySelector('.faq-a');
+  // FAQ Accordion
+  document.querySelectorAll('.faq-q').forEach(q => {
     q.addEventListener('click', () => {
+      const item = q.parentElement;
       const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(other => {
-        if(other !== item){
-          other.classList.remove('open');
-          other.querySelector('.faq-a').style.maxHeight = null;
-        }
+      
+      // Close all
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-a').style.maxHeight = null;
       });
-      item.classList.toggle('open', !isOpen);
-      a.style.maxHeight = !isOpen ? a.scrollHeight + 'px' : null;
-    });
-  });
 
-  // Scroll reveal (plays once per element, then stops observing it)
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+      // Open clicked if wasn't open
+      if(!isOpen){
+        item.classList.add('open');
+        const answer = item.querySelector('.faq-a');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
       }
     });
-  }, {threshold:0.15});
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  });
 
-  // Mobile nav fallback: smooth scroll already handled via CSS scroll-behavior
+  // Footer Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Intersection Observer for Scroll Animations (Appears once in view)
+  const observerOptions = {
+    threshold: 0.15,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // Stop observing once revealed so it doesn't re-animate
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.fade-in').forEach(el => {
+    observer.observe(el);
+  });
 </script>
-
 </body>
 </html>
